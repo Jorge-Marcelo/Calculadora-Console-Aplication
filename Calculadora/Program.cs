@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +29,9 @@ namespace Calculadora
 
 			Console.WriteLine("---------------------------------");
 			Console.WriteLine($"Resultado do Calculo: {num1} + {num2} = {resultado}");
-
+			Console.WriteLine("");
+			Console.WriteLine("---------------------------------");
+			Menu();
 		}
 
 		static void Subi()
@@ -48,6 +50,9 @@ namespace Calculadora
 
 			Console.WriteLine("---------------------------------");
 			Console.WriteLine($"Resultado do Calculo: {num1} - {num2} = {resultado}");
+			Console.WriteLine("");
+			Console.WriteLine("---------------------------------");
+			Menu();
 		}
 
 		static void Multi()
@@ -66,6 +71,9 @@ namespace Calculadora
 
 			Console.WriteLine("---------------------------------");
 			Console.WriteLine($"Resultado do Calculo: {num1} X {num2} = {resultado}");
+			Console.WriteLine("");
+			Console.WriteLine("---------------------------------");
+			Menu();
 		}
 
 		static void Divi()
@@ -89,11 +97,15 @@ namespace Calculadora
 
 			Console.WriteLine("---------------------------------");
 			Console.WriteLine($"Resultado do resto da divisão: {resto}");
+			Console.WriteLine("");
+			Console.WriteLine("---------------------------------");
+			Menu();
+
 		}
 
 		static void Menu()
 		{
-			Console.Clear();
+		
 			Console.WriteLine("Bem-Vindo a Calculadora");
 			Console.WriteLine("Ecolha uma opção");
 			Console.WriteLine("0 - Sair");
@@ -112,6 +124,7 @@ namespace Calculadora
 				case 2: Subi(); break;
 				case 3: Multi(); break;
 				case 4: Divi(); break;
+				default:Menu(); break;
 			}
 
 		}
